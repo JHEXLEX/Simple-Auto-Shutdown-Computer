@@ -1,14 +1,33 @@
 @echo off
-title otokapama
-echo  --------           ------------         -------------
+title Auto Shutdown
+echo  --------           ------------                --------------               ---------
+echo.                                                                           
+echo  ---                             Welcome to auto Shutdown Bat                      ---
+echo.
+echo  ---        All links                                                              ---
+echo.
+echo  ---  Instagram      "https://www.instagram.com/"                                  ---
+echo.
+echo  ---  Itch.io        "https://jhexlex.itch.io/"                                    ---
+echo.
+echo  ---  YouTube        "https://www.youtube.com/channel/UCDnz5uJzQkzbUppGWPAPiIA"    ---
+echo.
+echo  ---  Twitch         "https://www.twitch.tv/jhexlex"                               ---
+echo.
+echo  ---  Github         "https://github.com/JHEXLEX"                                  ---
+echo.
+echo  --------           ------------                --------------               ---------
 goto main
+
+
+
 
 :select
 setlocal
-
-echo  --------           ------------         -------------
-
-echo choose time type "h/m/s" (hour/munite/second)
+echo.
+echo  --------           ------------                --------------               ---------
+echo.
+echo  ----              choose time type "h/m/s" (hour/munite/second)                  ----
 set/P g=
 
 if %g%==h (goto hour
@@ -21,11 +40,12 @@ endlocal
 
 
 
+
 :hour
-
-echo  --------           ------------         -------------
-
-echo enter timeout 'hour'
+echo.
+echo  --------           ------------                --------------               ---------
+echo.
+echo  ----                          enter timeout 'hour'                               ----
 
 set/A a=3600
 set/P b=
@@ -35,11 +55,12 @@ set/A d=%c%*%a%
 goto startshutdown
 
 
+
 :munite
-
-echo  --------           ------------         -------------
-
-echo enter timeout 'munite'
+echo.
+echo  --------           ------------                --------------               ---------
+echo.
+echo  ----                          enter timeout 'minute'                             ----
 
 set/A a=60
 set/P b=
@@ -49,11 +70,12 @@ set/A d=%c%*%a%
 goto startshutdown
 
 
+
 :second
-
-echo  --------           ------------         -------------
-
-echo enter timeout 'second'
+echo.
+echo  --------           ------------                --------------               ---------
+echo.
+echo  ----                          enter timeout 'second'                             ----
 
 set/A a=1
 set/P b=
@@ -63,9 +85,10 @@ set/A d=%c%*%a%
 goto startshutdown
 
 
-:startshutdown
 
-echo  --------           ------------         -------------
+:startshutdown
+echo.
+echo  --------           ------------                --------------               ---------
 
 if %g%==h (echo computer will shut down in %b% hour)
 
@@ -80,10 +103,9 @@ goto main
 
 
 :cancelshutdown
-
-echo  --------           ------------         -------------
-
-echo do you want to cancel y/n
+echo.
+echo  --------           ------------                --------------               ---------
+echo  ----                      do you want to cancel "y/n"                            ----
 
 set/p cancel=
 
@@ -94,13 +116,14 @@ goto main
 
 
 :main
-
-echo  --------           ------------         -------------
-
-echo Do you want to shutdown or cancel "s/c"  (shutdown/cancel)
+echo.
+echo  --------           ------------                --------------               ---------
+echo.
+echo  ----    Do you want to shutdown or cancel "s/c"  (shutdown/cancel)               ----
 set/p h=
 
-echo  --------           ------------         -------------
+
+
 
 if %h%==s (goto select
 ) else if %h%==c (goto cancelshutdown
